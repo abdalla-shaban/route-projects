@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <!-- ========== Extra MetaData ========== -->
+    <meta
+      name="description"
+      content="Organize, save, and access your favorite websites effortlessly with Bookmark App – the ultimate bookmark manager designed to boost your productivity and keep your digital life organized."
+    />
+    <meta
+      name="keywords"
+      content="Bookmark Manager, Save Links, Organize Bookmarks, Bookmark Folders, Web Clipper, Link Organizer, URL Manager, Reading List, Cloud Bookmarking, Productivity Tool"
+    />
+    <!-- ========== Google Fonts ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ========== Fontawesome ========== -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- ========== Bootstrap ========== -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- ========== Global Style ========== -->
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="container mb-5">
+      <h1 class="my-5">Bookmarker</h1>
+
+      <section class="my-4 px-2 px-md-4 py-4">
+        <h2 class="mb-4">
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+
+        <form>
+          <div class="mb-4">
+            <label for="siteName" class="form-label fw-semibold"
+              ><i class="fa-solid fa-book-bookmark"></i> Site Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="siteName"
+              placeholder="Website Name"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="siteUrl" class="form-label fw-semibold"
+              ><i class="fa-solid fa-link"></i> Site URL</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="siteUrl"
+              placeholder="Website URL"
+            />
+          </div>
+
+          <button
+            type="button"
+            onclick="addSite()"
+            class="d-block mt-3 mx-auto"
+          >
+            Submit
+          </button>
+        </form>
+      </section>
+      <div class="table-responsive">
+        <table class="table align-middle text-center">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Name</th>
+              <th>Visit</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="sitesTBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
