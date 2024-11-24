@@ -135,7 +135,7 @@ for (var i = 0; i < formInputs.length; i++) {
 function siteValidation(element) {
   var regex = {
     siteName: /^\S.{2,}$/,
-    siteUrl: /^(https?:\/\/)?[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/,
+    siteUrl: /^(https?:\/\/)?([\w-]+(\.[\w-]+)+)(\/[\w-./?%&=]*)?$/,
   };
 
   if (regex[element.id].test(element.value) && isUnique()) {
