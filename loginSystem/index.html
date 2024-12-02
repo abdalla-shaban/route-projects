@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- ========== Google Fonts ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ========== Bootstrap ========== -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- ========== Global Style ========== -->
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="container" id="mainContainer">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <h1 class="mb-4">Smart Login System</h1>
+        <form class="mx-auto" id="loginForm">
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="uemail"
+              placeholder="enter your email"
+            />
+            <label for="uemail">Email</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control"
+              id="upassword"
+              placeholder="enter your password"
+            />
+            <label for="upassword">Password</label>
+          </div>
+          <div
+            id="inputsAlert"
+            class="bg-white text-danger fw-bold rounded my-2 d-none"
+          >
+            All Inputs Is Required
+          </div>
+          <button class="form-btn text-uppercase" id="loginBtn">Login</button>
+        </form>
+        <p class="mt-4 fs-5">
+          Don't have account? <a href="./signup.html">Sign Up</a>
+        </p>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
