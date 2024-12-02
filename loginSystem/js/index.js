@@ -15,16 +15,19 @@ if (localStorage.getItem("loggedInUser") !== null) {
   loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 }
 
-if (!loggedInUser?.loggedIn && location.pathname === "/loginSystem/home.html") {
-  location.pathname = "/loginSystem/index.html";
+if (
+  !loggedInUser?.loggedIn &&
+  location.pathname === "/route-projects/loginSystem/home.html"
+) {
+  location.pathname = "/route-projects/loginSystem/index.html";
 } else if (
   loggedInUser?.loggedIn &&
-  location.pathname === "/loginSystem/index.html"
+  location.pathname === "/route-projects/loginSystem/index.html"
 ) {
-  location.pathname = "/loginSystem/home.html";
+  location.pathname = "/route-projects/loginSystem/home.html";
 }
 
-if (location.pathname == "/loginSystem/home.html") {
+if (location.pathname == "/route-projects/loginSystem/home.html") {
   welcomeH1.textContent = `Welcome ${loggedInUser.name}`;
 }
 
@@ -53,7 +56,7 @@ loginBtn?.addEventListener("click", function (e) {
         var loggedInUser = users[i];
         loggedInUser.loggedIn = true;
         localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
-        location.pathname = "/loginSystem/home.html";
+        location.pathname = "/route-projects/loginSystem/home.html";
         isValid = true;
         clearInputs();
       }
