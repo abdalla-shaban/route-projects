@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <!-- ========== Fontawesome ========== -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- ========== Bootstrap ========== -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- ========== Global Style ========== -->
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg shadow py-4" id="mainNavbar">
+      <div class="container">
+        <a
+          class="navbar-brand fs-4 d-flex gap-3 align-items-center"
+          href="./index.html"
+        >
+          <img src="./images/logo.png" alt="logo" />
+          <p class="m-0 text-16">
+            Comapny Name
+            <span class="d-block text-10 text-color">tagline goes here</span>
+          </p>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><i class="fa-solid fa-bars"></i
+          ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav align-items-lg-center rounded-4 gap-lg-4 mt-4 mt-lg-0 ms-auto mb-2 mb-lg-0"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live Cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="m-0 position-relative">
+        <div class="hero-img"></div>
+        <div class="loader">
+          <i class="fa-solid fa-spinner fa-spin"></i>
+        </div>
+        <div class="container py-5">
+          <form id="searchForm" class="position-relative mb-5">
+            <input
+              class="form-control rounded-pill"
+              type="text"
+              name="search"
+              id="searchInput"
+              placeholder="Find your location..."
+            />
+            <button class="rounded-pill">Find</button>
+          </form>
+
+          <div class="row gx-0 rounded-4 overflow-hidden" id="rowData">
+            <div class="col-lg-4 bg-primary-color">
+              <div class="inner">
+                <div
+                  class="inner-header flex-between bg-primary-color-alt py-2 px-3 text-14 text-color"
+                >
+                  <span id="currentDay"></span>
+                  <span id="currentDayNumWithMonth"></span>
+                </div>
+                <div class="inner-body mb-3 p-4 pb-0">
+                  <h3 class="text-18 text-color mb-0" id="currentLocation"></h3>
+                  <div
+                    class="inner-body-info d-md-flex align-items-md-center gap-md-4 flex-md-row flex-lg-column align-items-lg-start gap-lg-0"
+                  >
+                    <span
+                      class="text-70 fw-bold d-block"
+                      id="currentDegree"
+                    ></span>
+                    <div class="icon-box" id="currentDegreeIcon"></div>
+                  </div>
+                  <span
+                    class="text-main-color text-capitalize text-14 d-block mt-3"
+                    id="currentStatus"
+                  ></span>
+                </div>
+                <div
+                  class="inner-footer d-flex align-items-center gap-4 px-4 py-3 text-14 text-color"
+                >
+                  <div class="inner-footer-item flex-center gap-1">
+                    <img
+                      src="./images/icon-umberella.png"
+                      alt="icon umberella"
+                    />
+                    <span>20%</span>
+                  </div>
+                  <div class="inner-footer-item flex-center gap-1">
+                    <img src="./images/icon-wind.png" alt="icon wind" />
+                    <span>18km/h</span>
+                  </div>
+                  <div class="inner-footer-item flex-center gap-1">
+                    <img src="./images/icon-compass.png" alt="icon compass" />
+                    <span>East</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="row gx-0 h-100" id="restOfDays"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-5 bg-secondary-color p-2 p-lg-5">
+      <div class="container">
+        <form class="position-relative mb-4">
+          <input
+            class="form-control rounded-pill"
+            type="email"
+            name="uemail"
+            placeholder="Enter your email to subscribe..."
+          />
+          <button class="rounded-pill">Subscribe</button>
+        </form>
+        <div class="social-links flex-center gap-3 my-4">
+          <div class="icon-box flex-center">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="icon-box flex-center">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div class="icon-box flex-center">
+            <i class="fa-brands fa-google-plus-g"></i>
+          </div>
+          <div class="icon-box flex-center">
+            <i class="fa-brands fa-pinterest"></i>
+          </div>
+        </div>
+        <p class="m-0 text-14 text-color text-center">
+          Copyright 2014 Company name. Designed by Themezy. Developed By
+          Abdullah Madkour All rights reserved
+        </p>
+      </div>
+    </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
