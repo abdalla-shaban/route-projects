@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <!-- ========== Fontawesome ========== -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- ========== Bootstrap ========== -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- ========== Global Style ========== -->
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg shadow py-4" id="mainNavbar">
+      <div class="container">
+        <a
+          class="navbar-brand fs-4 d-flex gap-3 align-items-center"
+          href="./index.html"
+        >
+          <img src="./images/logo.png" alt="logo" />
+          <p class="m-0 text-16">
+            Comapny Name
+            <span class="d-block text-10 text-color">tagline goes here</span>
+          </p>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><i class="fa-solid fa-bars"></i
+          ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav align-items-lg-center rounded-4 gap-lg-4 mt-4 mt-lg-0 ms-auto mb-2 mb-lg-0"
+          >
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live Cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <nav
+          class="bg-secondary-color py-3 px-4 my-4 rounded-pill align-items-center"
+          style="--bs-breadcrumb-divider: '➡'"
+          aria-label="breadcrumb"
+          id="breadcrumbNav"
+        >
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+          </ol>
+        </nav>
+      </div>
+      <section class="mt-5">
+        <div class="container">
+          <div class="row g-lg-4 g-xl-5">
+            <div class="col-lg-6">
+              <div
+                class="inner p-3 px-4 d-flex flex-column contact-card rounded-3 mb-4 mb-lg-0"
+              >
+                <div class="map"></div>
+                <div class="row gy-3">
+                  <div class="col-12">
+                    <div class="inner d-flex gap-3">
+                      <div class="icon-box">
+                        <i
+                          class="fa-solid fa-location-dot text-24 text-main-color"
+                        ></i>
+                      </div>
+                      <div class="content text-color">
+                        <h4 class="text-14">Company Name INC.</h4>
+                        <p class="m-0 text-14">
+                          2803 Avenue Street, Los Angeles
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="inner d-flex align-items-center gap-3">
+                      <div class="icon-box">
+                        <i
+                          class="fa-solid fa-phone text-24 text-main-color"
+                        ></i>
+                      </div>
+                      <div class="content text-color">
+                        <p class="text-14 m-0">+1 800 314 235</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="inner d-flex align-items-center gap-3">
+                      <div class="icon-box">
+                        <i
+                          class="fa-solid fa-envelope text-24 text-main-color"
+                        ></i>
+                      </div>
+                      <div class="content text-color">
+                        <p class="text-14 m-0">contact@companyname.com</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="inner">
+                <header>
+                  <h2>Contact us</h2>
+                  <p class="text-14 text-color">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Commodi consectetur inventore ducimus, facilis, numquam id
+                    soluta omnis eius recusandae nesciunt vero repellat harum
+                    cum. Nisi facilis odit hic, ipsum sed!
+                  </p>
+                </header>
+                <form>
+                  <div class="row gy-3 gx-2">
+                    <div class="col-lg-6">
+                      <div class="inner">
+                        <input
+                          class="contact-input rounded-pill"
+                          type="text"
+                          name="uname"
+                          placeholder="Your name..."
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="inner">
+                        <input
+                          class="contact-input rounded-pill"
+                          type="email"
+                          name="uemail"
+                          placeholder="Email Address..."
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="inner">
+                        <input
+                          class="contact-input rounded-pill"
+                          type="text"
+                          name="ucompany"
+                          placeholder="Company name..."
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="inner">
+                        <input
+                          class="contact-input rounded-pill"
+                          type="text"
+                          name="uwebsite"
+                          placeholder="Website..."
+                        />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="inner">
+                        <textarea
+                          class="contact-input rounded-4"
+                          name="umessage"
+                          placeholder="Message..."
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-5 bg-secondary-color p-2 p-lg-5">
+      <div class="container">
+        <form class="position-relative mb-4">
+          <input
+            class="form-control rounded-pill"
+            type="email"
+            name="uemail"
+            placeholder="Enter your email to subscribe..."
+          />
+          <button class="rounded-pill">Subscribe</button>
+        </form>
+        <div class="social-links flex-center gap-3 my-4">
+          <div class="icon-box flex-center">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="icon-box flex-center">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div class="icon-box flex-center">
+            <i class="fa-brands fa-google-plus-g"></i>
+          </div>
+          <div class="icon-box flex-center">
+            <i class="fa-brands fa-pinterest"></i>
+          </div>
+        </div>
+        <p class="m-0 text-14 text-color text-center">
+          Copyright 2014 Company name. Designed by Themezy. Developed By
+          <span class="text-main-color">Abdullah Madkour.</span> All rights
+          reserved
+        </p>
+      </div>
+    </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
