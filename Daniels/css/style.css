@@ -1,0 +1,897 @@
+/* ========== Global Styles ========== */
+:root {
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+  --light-color: #FFFFFF;
+  --dark-200: #1C1C1C;
+  --dark-100: #343434;
+  --gray-100: #F4F4F4;
+  --gray-200: #F7F7F7;
+  --gray-300: #999999;
+  --gray-400: #748182;
+  --base-duration: 0.5s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--secondary-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--primary-font);
+}
+
+/* ========== Utilities ========== */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-font {
+  font-family: var(--primary-font);
+}
+
+.secondary-font {
+  font-family: var(--secondary-font);
+}
+
+.text-black-a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.bg-gray-200 {
+  background-color: var(--gray-200);
+}
+
+.special-heading {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--dark-100);
+  width: fit-content;
+  margin: auto;
+  position: relative;
+  padding-bottom: 5px;
+  z-index: 1;
+}
+
+.special-heading::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("../images/dots.png");
+  background-position: center center;
+}
+
+
+/* ========== Start Navbar ========== */
+#navbar.navbar {
+  --bs-navbar-toggler-border-color: none;
+  --bs-navbar-toggler-border-radius: none;
+  --bs-navbar-toggler-icon-bg: none;
+  --bs-navbar-toggler-focus-width: none;
+}
+
+#navbar .navbar-brand {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: var(--primary-font);
+}
+
+#navbar .nav-item .nav-link {
+  position: relative;
+  padding-inline: 0;
+  font-size: 14px;
+  color: #111111;
+}
+
+#navbar .nav-item .nav-link::before {
+  content: "";
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: #111111;
+  transition: all var(--base-duration);
+}
+
+#navbar .nav-item .nav-link.active::before {
+  width: 100%;
+}
+
+/* ========== End Navbar ========== */
+
+
+/* ========== Start Header ========== */
+
+#home {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/bg.jpg");
+  background-position: 0 0;
+  background-size: auto;
+  color: var(--light-color);
+}
+
+#home p {
+  font-size: 50px;
+  font-weight: 800;
+  font-family: var(--primary-font);
+  margin: 0;
+}
+
+#home h1 {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+#home h1 span {
+  font-weight: 400;
+}
+
+
+/* ========== End Header ========== */
+
+
+
+/* ========== Start About ========== */
+
+#about .img-box img {
+  width: 100%;
+}
+
+#about .img-box {
+  position: relative;
+}
+
+#about .img-box::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: -30px;
+  bottom: -30px;
+  z-index: -1;
+  background-image: url("../images/dots.png");
+}
+
+#about article header>h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--dark-100);
+}
+
+#about article header>p {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gray-300);
+}
+
+#about article>p {
+  font-size: 15px;
+  color: var(--gray-400);
+}
+
+#about article>p span {
+  font-weight: 700;
+}
+
+#about article .skills {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#about article .skills .progress-bar {
+  background-color: var(--dark-200);
+  font-size: 13px;
+}
+
+#about article .skills .progress-bar h5 {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+#about article .skills .progress,
+.progress-stacked {
+  --bs-progress-height: 30px;
+  --bs-progress-bg: var(--gray-200);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 7px inset;
+}
+
+#about article .buttons button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--dark-200);
+  background-color: var(--dark-200);
+  font-size: 13px;
+  color: var(--light-color);
+  transition: all var(--base-duration);
+}
+
+#about article .buttons button:hover {
+  background-color: var(--light-color);
+  color: #1C1C1C;
+}
+
+#about article .buttons button:last-child {
+  background-color: var(--light-color);
+  color: var(--dark-200);
+}
+
+#about article .buttons button:last-child:hover {
+  background-color: var(--dark-200);
+  color: var(--light-color);
+}
+
+/* ========== End About ========== */
+
+
+/* ========== Start Services ========== */
+
+#services .inner {
+  background-color: var(--light-color);
+}
+
+
+#services .inner header .icon-box {
+  width: 75px;
+  height: 75px;
+  font-size: 25px;
+  background-color: var(--gray-100);
+  transition: all var(--base-duration);
+}
+
+#services .inner:hover .icon-box {
+  background-color: var(--dark-200);
+  color: var(--light-color);
+}
+
+#services .inner header h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--dark-100);
+}
+
+#services .inner>p {
+  font-size: 14px;
+  color: var(--gray-400);
+}
+
+/* ========== End Services ========== */
+
+
+/* ========== Start Works ========== */
+
+#works .inner {
+  position: relative;
+  overflow: hidden;
+}
+
+#works .inner .layer {
+  position: absolute;
+  left: 2.5%;
+  top: 5%;
+  width: 95%;
+  height: 95%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  background-color: var(--light-color);
+}
+
+#works .inner .layer h3 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--dark-100);
+  transform: translateY(-15px);
+  transition: all 0.5s;
+}
+
+#works .inner .layer .icon-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--light-color);
+  transform: translateY(5px);
+  background-color: var(--dark-200);
+  border: 1px solid var(--dark-200);
+  transition: all 0.5s;
+}
+
+#works .inner:hover .layer {
+  top: 2.5%;
+  height: 95%;
+  opacity: 1;
+  visibility: visible;
+}
+
+#works .inner:hover .icon-box,
+#works .inner:hover h3 {
+  transform: translateY(0);
+}
+
+
+#works .inner .layer .icon-box:hover {
+  background-color: var(--light-color);
+  color: var(--dark-200);
+}
+
+.modal-header {
+  border: none;
+}
+
+.btn-close {
+  --bs-btn-close-bg: none;
+  --bs-btn-close-focus-shadow: none;
+}
+
+.modal-content {
+  border: none;
+  background-color: transparent;
+}
+
+#works .nav-link {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222;
+}
+
+#works .nav-link {
+  padding: 10px 0;
+  position: relative;
+}
+
+#works .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: var(--dark-200);
+  transition: all 0.5s;
+}
+
+#works .nav-item .nav-link.active {
+  background-color: transparent;
+}
+
+#works .nav-item .nav-link.active::before {
+  width: 100%;
+}
+
+/* ========== End Works ========== */
+
+
+/* ========== Start Clients ========== */
+
+#clients img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+#clients p:first-of-type {
+  font-size: 15px;
+  color: var(--gray-400);
+  word-spacing: 2px;
+}
+
+#clients h4 {
+  color: var(--dark-100);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#clients p:last-of-type {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888888;
+}
+
+#clients .carousel-indicators {
+  gap: 10px;
+  margin: 10px;
+}
+
+#clients .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--gray-400);
+}
+
+#clients .carousel-indicators .active {
+  background-color: #869791;
+}
+
+#clients .insights {
+  background-color: var(--light-color);
+}
+
+#clients .insights i {
+  font-size: 30px;
+  color: var(--dark-100);
+}
+
+#clients .insights h3 {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--dark-100);
+}
+
+#clients .insights p {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gray-400);
+}
+
+/* ========== End Clients ========== */
+
+
+/* ========== Start Team ========== */
+
+#team .inner {
+  background-color: #5B5B5B;
+  color: var(--light-color);
+  text-align: center;
+}
+
+#team .inner .img-box {
+  overflow: hidden;
+  position: relative;
+}
+
+#team .inner .img-box .layer {
+  position: absolute;
+  left: 2.5%;
+  top: 2.5%;
+  width: 95%;
+  height: 95%;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  transform: rotateY(180deg) scale(0.5);
+  background-color: var(--light-color);
+  transition: all var(--base-duration);
+}
+
+#team .inner .img-box .layer .icon-box {
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  background-color: var(--dark-200);
+  transition: all var(--base-duration);
+  border: 1px solid var(--dark-200);
+}
+
+#team .inner .img-box .layer .icon-box:hover {
+  background-color: var(--light-color);
+  color: var(--dark-200);
+}
+
+#team .inner img {
+  width: 100%;
+  transition: all var(--base-duration);
+}
+
+#team .inner .img-box:hover img {
+  transform: scale(1.2);
+}
+
+#team .inner:hover .layer {
+  transform: rotateY(360deg) scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+#team .inner h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+#team .inner p {
+  font-family: var(--primary-font);
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ========== End Team ========== */
+
+
+/* ========== Start Contact ========== */
+
+#contact .inner .icon-box {
+  width: 60px;
+  height: 60px;
+  font-size: 25px;
+  border-radius: 50%;
+  margin: auto;
+  background-color: var(--gray-200);
+  transition: all var(--base-duration);
+}
+
+#contact .inner h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark-100);
+}
+
+#contact .inner p {
+  font-size: 15px;
+  color: var(--gray-400);
+  word-spacing: 2px;
+}
+
+#contact .inner:hover .icon-box {
+  background-color: var(--dark-200);
+  color: var(--light-color);
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--gray-100);
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  outline: none;
+}
+
+#contact form textarea {
+  max-height: 170px;
+}
+
+#contact form button {
+  width: 150px;
+  padding: 10px;
+  font-size: 13px;
+  border: 1px solid var(--dark-200);
+  background-color: var(--dark-200);
+  color: var(--light-color);
+  border-radius: 6px;
+  transition: all var(--base-duration);
+}
+
+#contact form button:hover {
+  background-color: var(--light-color);
+  color: var(--dark-200);
+}
+
+/* ========== End Contact ========== */
+
+
+/* ========== Start Footer ========== */
+
+footer {
+  background-color: var(--dark-200);
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray-400);
+}
+
+/* ========== End Footer ========== */
+
+
+
+.typing-title::after {
+  content: "";
+  animation: typing infinite 8s linear;
+}
+
+
+@keyframes typing {
+
+  /* Typing "Larry Daniels" */
+  0% {
+    content: "|";
+  }
+
+  1.4% {
+    content: "L|";
+  }
+
+  2.8% {
+    content: "La|";
+  }
+
+  4.19% {
+    content: "Lar|";
+  }
+
+  4.19% {
+    content: "Larr|";
+  }
+
+  5.6% {
+    content: "Larry|";
+  }
+
+  7% {
+    content: "Larry |";
+  }
+
+  8.4% {
+    content: "Larry D|";
+  }
+
+  9.8% {
+    content: "Larry Da|";
+  }
+
+  11.20% {
+    content: "Larry Dan|";
+  }
+
+  12.60% {
+    content: "Larry Dani|";
+  }
+
+  14% {
+    content: "Larry Danie|";
+  }
+
+  15.4% {
+    content: "Larry Daniel|";
+  }
+
+  16.8% {
+    content: "Larry Daniels|";
+  }
+
+  /* Holding Larry Daniels */
+  23.2% {
+    content: "Larry Daniels|";
+  }
+
+  /* Deleting "Larry Daniels" */
+  24.59% {
+    content: "Larry Daniel|";
+  }
+
+  25.99% {
+    content: "Larry Danie|";
+  }
+
+  27.39% {
+    content: "Larry Dani|";
+  }
+
+  28.79% {
+    content: "Larry Dan|";
+  }
+
+  30.19% {
+    content: "Larry Da|";
+  }
+
+  31.59% {
+    content: "Larry D|";
+  }
+
+  32.99% {
+    content: "Larry |";
+  }
+
+  34.39% {
+    content: "Larry|";
+  }
+
+  35.79% {
+    content: "Larr|";
+  }
+
+  37.19% {
+    content: "Lar|";
+  }
+
+  38.59% {
+    content: "La|";
+  }
+
+  39.99% {
+    content: "L|";
+  }
+
+  41.39% {
+    content: "|";
+  }
+
+  /* Typing "Designer" */
+  41.39% {
+    content: "|";
+    /* Start typing "Designer" */
+  }
+
+  42.79% {
+    content: "D|";
+  }
+
+  44.19% {
+    content: "De|";
+  }
+
+  45.59% {
+    content: "Des|";
+  }
+
+  46.99% {
+    content: "Desi|";
+  }
+
+  48.39% {
+    content: "Desig|";
+  }
+
+  49.79% {
+    content: "Design|";
+  }
+
+  51.19% {
+    content: "Designe|";
+  }
+
+  52.59% {
+    content: "Designer|";
+  }
+
+  /* Holding "Designer" */
+  59.99% {
+    content: "Designer|";
+  }
+
+  /* Deleting "Designer" */
+  61.39% {
+    content: "Designe|";
+  }
+
+  62.79% {
+    content: "Design|";
+  }
+
+  64.19% {
+    content: "Desig|";
+  }
+
+  65.59% {
+    content: "Desi|";
+  }
+
+  66.99% {
+    content: "Des|";
+  }
+
+  68.39% {
+    content: "De|";
+  }
+
+  69.79% {
+    content: "D|";
+  }
+
+  71.19% {
+    content: "|";
+    /* End deletion of "Designer" */
+  }
+
+  /* Typing "Developer" */
+  71.19% {
+    content: "|";
+    /* Start typing "Developer" */
+  }
+
+  72.59% {
+    content: "D|";
+  }
+
+  73.99% {
+    content: "De|";
+  }
+
+  75.39% {
+    content: "Dev|";
+  }
+
+  76.79% {
+    content: "Deve|";
+  }
+
+  78.19% {
+    content: "Devel|";
+  }
+
+  79.59% {
+    content: "Develo|";
+  }
+
+  80.99% {
+    content: "Develop|";
+  }
+
+  82.39% {
+    content: "Developer|";
+  }
+
+  /* Holding "Developer" */
+  89.99% {
+    content: "Developer|";
+  }
+
+  /* Deleting "Developer" */
+  91.39% {
+    content: "Develope|";
+  }
+
+  92.79% {
+    content: "Develop|";
+  }
+
+  94.19% {
+    content: "Develo|";
+  }
+
+  95.59% {
+    content: "Devel|";
+  }
+
+  96.99% {
+    content: "Deve|";
+  }
+
+  98.39% {
+    content: "Dev|";
+  }
+
+  99.79% {
+    content: "De|";
+  }
+
+  100% {
+    content: "|";
+    /* End deletion of "Developer" */
+  }
+}
+
+
+
+@media screen and (min-width:992px) {
+  #home {
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  #home h1 {
+    font-size: 60px;
+  }
+}
